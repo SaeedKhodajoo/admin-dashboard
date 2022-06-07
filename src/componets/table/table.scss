@@ -1,0 +1,47 @@
+.table {
+  width: 100%;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  .tableCell {
+    .cellWrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .image {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .status {
+      padding: 5px;
+      border-radius: 5px;
+      font-weight: bold;
+
+      &.Pending {
+        color: #fcbf49;
+        border: 1.6px solid #fcbf49;
+      }
+
+      &.Approved {
+        color: #80b918;
+        border: 1.6px solid #80b918;
+      }
+    }
+  }
+
+  &.dark {
+    .tableContainer {
+      background-color: var(--darkCard-bg);
+      .tableCell {
+        color: var(--dark-title);
+
+        .status {
+          color: var(--dark-text);
+        }
+      }
+    }
+  }
+}

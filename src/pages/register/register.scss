@@ -1,0 +1,203 @@
+.register {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .back-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    h3 {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 0;
+      transition: all 0.3s ease-in-out;
+      color: var(--secondary-color);
+
+      svg {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .left {
+    flex: 1;
+    width: 100%;
+    background-color: #2e2e70;
+    opacity: 1;
+    background-image: repeating-radial-gradient(
+        circle at 0 0,
+        transparent 0,
+        #2e2e70 36px
+      ),
+      repeating-linear-gradient(#17193f55, #17193f);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    color: #fff;
+    padding: 12rem 2rem 0;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 0 auto;
+    }
+  }
+
+  .right {
+    flex: 1.3;
+    background-color: #000000e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .form-container {
+      width: 100%;
+      form {
+        background-color: transparent;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 2rem;
+        color: var(--gray);
+        width: 90%;
+
+        h2 {
+          margin-bottom: 1.5rem;
+        }
+
+        span {
+          margin-bottom: 1.5rem;
+        }
+
+        input {
+          width: 85%;
+          height: 2rem;
+          padding: 1.4rem 0.8rem;
+          border: 1px solid var(--gray);
+          outline: 0;
+          border-radius: 0.2rem;
+          color: #000;
+          font-size: 1.1rem;
+          background-color: transparent;
+          color: #fff;
+          margin-bottom: 1rem;
+
+          &::placeholder {
+            color: #7f7f7f;
+          }
+
+          &:focus {
+            border: 2px solid var(--main-color);
+          }
+        }
+
+        .terms {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-top: 0.5rem;
+
+          .checkbox {
+            width: 1rem;
+            height: 1rem;
+            margin: auto 0;
+          }
+
+          p {
+            margin: auto 0;
+            line-height: 1.5rem;
+            span {
+              font-weight: bold;
+              color: #fff;
+            }
+          }
+        }
+
+        button {
+          width: 85%;
+          height: 2.5rem;
+          border: none;
+          border-radius: 0.3rem;
+          background-color: var(--main-color);
+          color: #fff;
+          font-size: 1.2rem;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          margin-top: 1.5rem;
+
+          &:hover {
+            color: #2196f3;
+            background-color: #fff;
+            border: 1px solid var(--main-color);
+          }
+        }
+
+        .login-link {
+          font-size: 0.9rem;
+          margin-top: 1.5rem;
+          span {
+            font-size: 1.1rem;
+            color: var(--main-color);
+            cursor: pointer;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .register {
+    .left {
+      display: none !important;
+    }
+    .right {
+      .form-container {
+        form {
+          align-items: center;
+          width: 100%;
+        }
+        h2,
+        span,
+        .terms {
+          align-self: start;
+          width: 85%;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .register {
+    .back-btn {
+      right: 1rem;
+    }
+    .form-container {
+      form {
+        padding-top: 1rem!important;
+      }
+    }
+  }
+}

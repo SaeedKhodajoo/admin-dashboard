@@ -1,0 +1,230 @@
+.single {
+  padding: 1rem;
+  width: 100%;
+
+  .single-container {
+    margin-left: 17rem;
+    transition: all 0.3s linear;
+
+    &.single-container-mini {
+      margin-left: 5rem;
+    }
+
+    .single-box {
+      margin: 2rem 0.5rem;
+      .single-top {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+
+        .left {
+          flex: 1;
+          position: relative;
+          -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+          box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+          border-radius: 0.5rem;
+          padding: 0.5rem 1rem;
+          background-color: #fff;
+          width: 100%;
+
+          .editBtn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px;
+            background-color: var(--main-color);
+            color: #fff;
+            font-size: 16px;
+            border-radius: 0 5px 0 5px;
+          }
+
+          .title {
+            color: var(--gray);
+            font-weight: 400;
+            margin-bottom: 2rem;
+          }
+
+          .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            .itemImg {
+              width: 5rem;
+              height: 5rem;
+              border-radius: 50%;
+            }
+
+            .details {
+              display: flex;
+              flex-direction: column;
+
+              .itemTitle {
+                color: var(--black);
+                margin-bottom: 1rem;
+              }
+
+              .detailItem {
+                margin-bottom: 0.5rem;
+                display: flex;
+                gap: 1rem;
+
+                .itemKey {
+                  font-weight: bold;
+                  width: 7rem;
+                  color: var(--black);
+                }
+
+                .itemValue {
+                  width: 100%;
+                  color: var(--gray);
+                }
+              }
+            }
+          }
+        }
+
+        .right {
+          flex: 2;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.dark {
+
+    .single-container{
+      .single-box{
+        
+          .left{
+            background-color: var(--darkCard-bg);
+
+            .title{
+              color: var(--dark-title);
+            }
+
+            .item{
+              .details{
+                .itemTitle{
+                  color: var(--dark-title);
+                }
+                .detailItem{
+                  .itemKey{
+                    color: var(--dark-title);
+                  }
+
+                  .itemValue{
+                    color: var(--dark-text);
+                  }
+                }
+              }
+            }
+          
+        }
+      }
+    }
+
+    background-color: var(--dark-bg);
+    .sidebar {
+      background-color: var(--darkCard-bg);
+      .closeSidebar-btn {
+        background-color: #fff;
+      }
+
+      hr {
+        border-color: var(--dark-text);
+      }
+
+      .top {
+        a {
+          .logo {
+            color: var(--dark-title);
+          }
+        }
+      }
+
+      .center {
+        .title {
+          color: var(--dark-text);
+        }
+        li {
+          span {
+            color: var(--dark-title);
+          }
+        }
+      }
+
+      .sidebar-bottom {
+        .logout {
+          border-color: var(--dark-title);
+
+          svg,
+          span {
+            color: var(--dark-title);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .single {
+    .single-container {
+      margin-left: 0;
+
+      .single-top {
+        .left {
+          .title {
+            font-size: 1.4rem;
+          }
+
+          .item {
+            .itemTitle {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .single-top {
+    flex-direction: column;
+
+    .left {
+      padding-bottom: 1.5rem !important;
+      .item {
+        gap: 5rem !important;
+
+        .itemImg {
+          width: 7rem !important;
+          height: 7rem !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .single-top {
+    .left {
+      .item {
+        flex-direction: column;
+        gap: 2rem !important;
+
+        .details {
+          .detailItem {
+            .itemKey {
+              width: 5rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

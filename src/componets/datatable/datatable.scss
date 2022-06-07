@@ -1,0 +1,123 @@
+.datatable {
+  color: var(--gray);
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+
+  .datatable-container {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+
+    .title {
+      font-size: 26px;
+    }
+
+    .edit {
+      padding: 5px 20px;
+      border: 2px solid var(--green);
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--green);
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+        background-color: var(--green);
+      }
+    }
+  }
+
+  .cellWithImg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+
+    .cellImg {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .cellWithStatus {
+    &.active {
+      color: var(--green);
+    }
+    &.pending {
+      color: var(--orange);
+    }
+    &.passive {
+      color: var(--red);
+    }
+  }
+
+  .actionBtns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .viewBtn {
+      padding: 5px 10px;
+      border: 1px dotted var(--secondary-color);
+      color: var(--secondary-color);
+      cursor: pointer;
+    }
+    .deleteBtn {
+      padding: 5px 10px;
+      border: 1px dotted var(--orange);
+      color: var(--orange);
+      cursor: pointer;
+    }
+  }
+
+  &.dark {
+    background-color: var(--darkCard-bg);
+    .datatable-container {
+      color: var(--dark-text);
+    }
+
+    .datagrid {
+      color: var(--dark-text);
+
+      .cellWithStatus {
+        color: var(--dark-text);
+      }
+
+      .actionBtns {
+        .viewBtn,
+        .deleteBtn {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .datatable-container {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding-left: 0 !important;
+
+    .title {
+      text-align: left;
+      width: 100%;
+    }
+
+    a {
+      align-self: start;
+    }
+  }
+}

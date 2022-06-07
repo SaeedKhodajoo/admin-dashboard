@@ -1,0 +1,219 @@
+.new {
+  padding: 1rem;
+  width: 100%;
+  min-height: 100vh;
+
+  .new-container {
+    margin-left: 17rem;
+    transition: all 0.3s linear;
+
+    &.new-container-mini {
+      margin-left: 5rem;
+    }
+
+    .new-box {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.07);
+      border-radius: 0.5rem;
+      padding: 0.8rem;
+      background-color: #fff;
+      margin: 2rem 0.5rem;
+
+      .top {
+        margin-bottom: 1.2rem;
+
+        h1 {
+          font-size: 1.8rem;
+          font-weight: 500;
+          color: var(--gray);
+          padding: 1rem;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        .left {
+          flex: 1;
+          .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            img {
+              width: 6rem;
+              height: 6rem;
+            }
+          }
+        }
+        .right {
+          flex: 2;
+
+          form {
+            display: flex;
+            flex-wrap: wrap;
+
+            .formInput {
+              width: 40%;
+              margin-bottom: 1rem;
+              margin-right: 15px;
+
+              label {
+                color: var(--gray);
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+              }
+
+              input {
+                width: 90%;
+                margin-top: 0.4rem;
+                border: none;
+                border-bottom: 1px solid var(--gray);
+                padding: 0.5rem 0.8rem;
+                outline: none;
+                background-color: transparent;
+
+                &:focus {
+                  border: 1px solid var(--main-color);
+                }
+              }
+            }
+
+            .sendBtn {
+              width: 12rem;
+              margin: 1rem 0;
+              border: 2px solid var(--main-color);
+              border-radius: 5px;
+              padding: 0.8rem;
+              text-align: center;
+              font-weight: bold;
+              background-color: var(--main-color);
+              color: white;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #fff;
+                color: var(--main-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.dark {
+
+    .new-box{
+      background-color:var(--darkCard-bg);
+
+      .right{
+        form{
+          .formInput{
+            label,input{
+              color: var(--dark-text);
+            }
+          }
+        }
+      }
+    }
+
+    background-color: var(--dark-bg);
+    .sidebar {
+      background-color: var(--darkCard-bg);
+      .closeSidebar-btn {
+        background-color: #fff;
+      }
+
+      hr {
+        border-color: var(--dark-text);
+      }
+
+      .top {
+        a {
+          .logo {
+            color: var(--dark-title);
+          }
+        }
+      }
+
+      .center {
+        .title {
+          color: var(--dark-text);
+        }
+        li {
+          span {
+            color: var(--dark-title);
+          }
+        }
+      }
+
+      .sidebar-bottom {
+        .logout {
+          border-color: var(--dark-title);
+
+          svg,
+          span {
+            color: var(--dark-title);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .new {
+    .new-container {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .new {
+    .new-container {
+      .bottom {
+        flex-direction: column-reverse;
+
+        .right {
+          form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .new {
+    .new-container {
+      .top {
+        h1 {
+          padding: 1rem 0 0 !important;
+        }
+      }
+      .bottom {
+        .right {
+          form {
+            padding: 0 1rem;
+            .formInput {
+              width: 100% !important;
+              margin-right: 0 !important;
+              input {
+                width: 100% !important;
+              }
+            }
+            .sendBtn {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

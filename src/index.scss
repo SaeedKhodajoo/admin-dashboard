@@ -1,0 +1,32 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+#root {
+  --main-color: #2196f3;
+  --secondary-color: #48bfe3;
+  --gray: #7f7f7f;
+  --black: #011627;
+  --green: #007200;
+  --orange: #f79605;
+  --red: #cf0c0c;
+  --dark-bg:#121212;
+  --darkCard-bg:#1e1e1e;
+  --dark-title: rgba(255, 255, 255, 0.87);
+  --dark-text: rgba(255, 255, 255, 0.60);
+}
+
+.app {
+  display: flex;
+  background-color: #f8f9fa;
+  width: 100%;
+  position: relative;
+
+  a {
+    color: var(--black);
+  }
+}
