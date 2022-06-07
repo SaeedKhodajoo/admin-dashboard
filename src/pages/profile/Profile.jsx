@@ -129,14 +129,14 @@ const Profile = () => {
               <h3 className="profile-card_title">Profile Information</h3>
               <div className="profile-card_bottom">
                 <p className="profile-about">
-                  Hi, I’m Esthera Jackson, Decisions: If you can’t decide, the
-                  answer is no. If two equally difficult paths, choose the one
-                  more painful in the short term (pain avoidance is creating an
-                  illusion of equality).
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                  eius id magnam. Cumque pariatur aspernatur soluta. Fugit non
+                  doloribus illum sit distinctio adipisci quaerat id, nobis
+                  nostrum, aperiam itaque enim!
                 </p>
                 <div className="profile-info">
                   <div className="profile-info_row">
-                    <h4>Fullname :</h4> <span>Esthera Jackson</span>
+                    <h4>Fullname :</h4> <span>John Doe</span>
                   </div>
                   <div className="profile-info_row">
                     <h4>Mobile :</h4> <span>(44) 123 1234 123</span>
