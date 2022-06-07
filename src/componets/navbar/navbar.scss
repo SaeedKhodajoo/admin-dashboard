@@ -89,6 +89,13 @@
         align-items: center;
         gap: 0.5rem;
         position: relative;
+        
+        .dark-btn_container{
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: .1rem;
+        }
 
         .notif-counter {
           position: absolute;
