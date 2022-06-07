@@ -72,13 +72,18 @@ const Navbar = (props) => {
           </div>
         </div>
         <div className="items">
-          <div className="item" onClick={() => dispatch({ type: "TOGGLE" })}>
+          <div className="item">
+            <div
+              className="dark-btn_container"
+              onClick={() => dispatch({ type: "TOGGLE" })}
+            >
             {darkMode ? <span>Dark</span> : <span>Light</span>}
             {darkMode ? (
               <DarkModeOutlined />
             ) : (
               <LightModeOutlined />
             )}
+             </div>
           </div>
           <div className="item" ref={dropdown_toggle_el}>
             <NotificationsNoneOutlined />
